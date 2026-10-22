@@ -1,0 +1,3 @@
+O mutmut alterou o operador ">=` para ">", fazendo com que o score precise ser maior que 700 para aprovar pelo critério do score, embora a renda ainda possa aprovar o empréstimo por causa do "or".
+O teste com score 850 não detectou o problema, pois esse valor satisfaz tanto ">= 700" quanto "> 700", produzindo o mesmo resultado.
+A análise de valor limite permite identificar diferenças entre o código original e os mutantes. No caso do score, o valor 700 é essencial, pois é nele que as duas condições apresentam resultados diferentes.
